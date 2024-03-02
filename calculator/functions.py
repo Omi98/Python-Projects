@@ -1,4 +1,5 @@
 from tkinter import *
+from PIL import ImageTk, Image
 
 
 # global vars
@@ -11,16 +12,17 @@ math = None
 
 
 # create window
-def setWindow():
+def createWindow():
     myWindow = Tk()
     myWindow.title("My Calculator")
+    return myWindow
     #window.configure(bg="black")
     #window.geometry("400x600") 
-    return myWindow
+    
 
 # create entry field
 def entryField(window):
-    myEntry = Entry(window, width=35, borderwidth=5)
+    myEntry = Entry(window, width=45, borderwidth=5)
     myEntry.grid(row=0, column=0, columnspan=4, padx=10, pady=10)
     return myEntry
 
@@ -46,27 +48,27 @@ def create_buttons(window, e):
     btnDiv = Button(window, text=chr(247), padx=20, pady=10, command=lambda: btn_div(e))
 
     # first row
-    btn7.grid(row=1, column=0)
-    btn8.grid(row=1, column=1)
-    btn9.grid(row=1, column=2)
-    btnDiv.grid(row=1, column=3)
+    btn7.grid(row=1, column=0, padx=5, pady=5)
+    btn8.grid(row=1, column=1, padx=5, pady=5)
+    btn9.grid(row=1, column=2, padx=5, pady=5)
+    btnDiv.grid(row=1, column=3, padx=5, pady=5)
 
     # second row
-    btn4.grid(row=2, column=0)
-    btn5.grid(row=2, column=1)
-    btn6.grid(row=2, column=2)
-    btnMul.grid(row=2, column=3)
+    btn4.grid(row=2, column=0, padx=5, pady=5)
+    btn5.grid(row=2, column=1, padx=5, pady=5)
+    btn6.grid(row=2, column=2, padx=5, pady=5)
+    btnMul.grid(row=2, column=3, padx=5, pady=5)
 
     # third row
-    btn1.grid(row=3, column=0)
-    btn2.grid(row=3, column=1)
-    btn3.grid(row=3, column=2)
-    btnSub.grid(row=3, column=3)
+    btn1.grid(row=3, column=0, padx=5, pady=5)
+    btn2.grid(row=3, column=1, padx=5, pady=5)
+    btn3.grid(row=3, column=2, padx=5, pady=5)
+    btnSub.grid(row=3, column=3, padx=5, pady=5)
 
     # fourth row
-    btn0.grid(row=4, column=0)
-    btnClear.grid(row=4, column=1)
-    btnEqual.grid(row=4, column=2)
+    btn0.grid(row=4, column=0, padx=5, pady=5)
+    btnClear.grid(row=4, column=1, padx=5, pady=5)
+    btnEqual.grid(row=4, column=2, padx=5, pady=5)
     btnAdd.grid(row=4, column=3)
 
 
