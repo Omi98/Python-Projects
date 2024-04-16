@@ -15,10 +15,10 @@ math = None
 def createWindow():
     myWindow = Tk()
     myWindow.title("My Calculator")
+    myWindow.geometry("400x600") 
     return myWindow
     #window.configure(bg="black")
-    #window.geometry("400x600") 
-    
+
 
 # create entry field
 def entryField(window):
